@@ -54,6 +54,6 @@ main{
 footer{
     background-color: blueviolet;
     grid-column: 1 / 4;
-    height: 150px;
+    height: 200px;
     text-align: center;
 }
