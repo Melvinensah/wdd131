@@ -1,0 +1,34 @@
+@media (min-width: 768px) {
+    /* Hide the mobile hamburger control completely */
+    .menu-btn {
+        display: none;
+    }
+
+    /* Convert Navigation block back into top bar ribbon */
+    nav {
+        display: flex !important; /* Forces layout to stay row-based regardless of JS overrides */
+        flex-direction: row;
+        position: static;
+        width: auto;
+        background: none;
+    }
+
+    nav a {
+        border-top: none;
+        padding: 0.5rem 1.25rem;
+        border-radius: 4px;
+        margin-left: 0.25rem;
+    }
+
+    /* Desktop Navigation Hover Effects */
+    nav a:hover, nav a.active {
+        background-color: #521d85;
+        text-decoration: none;
+    }
+
+    /* --- Desktop Grid Layout using auto-fit and minmax --- */
+    main {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+    }
+}
