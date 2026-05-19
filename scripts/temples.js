@@ -11,3 +11,24 @@ const lastUpdated = document.lastModified;
 if (updateElement){
     updateElement.textContent = "last modified   " + lastUpdated; 
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    
+    // --- 1. Responsive Hamburger Interaction ---
+    const menuBtn = document.querySelector(".menu-btn");
+    const navMenu = document.querySelector("nav");
+
+    menuBtn.addEventListener("click", () => {
+        // Toggle view class inside navigation
+        navMenu.classList.toggle("open");
+        
+        // Check state to switch button character symbol safely 
+        if (navMenu.classList.contains("open")) {
+            menuBtn.innerHTML = "&#10006;"; // Displays 'X' (Close symbol)
+        } else {
+            menuBtn.innerHTML = "&#9776;";  // Displays '☰' (Hamburger symbol)
+        }
+    });
+
+    
+});
