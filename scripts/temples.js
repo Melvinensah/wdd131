@@ -1,16 +1,16 @@
-const YearElement = document.getElementById("currentyear");
-const currentYear = new Date().getFullYear();
+// const YearElement = document.getElementById("currentyear");
+// const currentYear = new Date().getFullYear();
 
-if (YearElement) {
-    YearElement.textContent = currentYear;
-}
+// if (YearElement) {
+//     YearElement.textContent = currentYear;
+// }
 
-const updateElement = document.getElementById("lastModified");
-const lastUpdated = document.lastModified;
+// const updateElement = document.getElementById("lastModified");
+// const lastUpdated = document.lastModified;
 
-if (updateElement){
-    updateElement.textContent = "last modified   " + lastUpdated; 
-}
+// if (updateElement){
+//     updateElement.textContent = "last modified   " + lastUpdated; 
+// }
 
 document.addEventListener("DOMContentLoaded", () => {
     
@@ -30,5 +30,17 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    
+    // --- 2. Automated Copyright & Modification Trackers ---
+    const currentYearSpan = document.getElementById("currentyear");
+    const lastModifiedParagraph = document.getElementById("lastModified");
+
+    // Output current system year dynamically
+    if (currentYearSpan) {
+        currentYearSpan.textContent = new Date().getFullYear();
+    }
+
+    // Output document modification context metadata
+    if (lastModifiedParagraph) {
+        lastModifiedParagraph.textContent = `Last Modification: ${document.lastModified}`;
+    }
 });
