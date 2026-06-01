@@ -1,11 +1,13 @@
 const temples = [
-  {
+
+   {
     templeName: "Sierra Leone Freetown Temple",
     location: "Freetown, Sierra Leone",
     dedicated: "2027, April, 6",
     area: 11736,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/sierra-leone-freetown/400x250/sierra-leone-freetown-temple-lds-273998-wallpaper.jpg"
+    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/freetown-sierra-leone-temple/freetown-sierra-leone-temple-24087-main.jpg"
   },
+ 
   {
     templeName: "Aba Nigeria",
     location: "Aba, Nigeria",
@@ -42,13 +44,6 @@ const temples = [
     imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg"
   },
   {
-    templeName: "Lima Perú",
-    location: "Lima, Perú",
-    dedicated: "1986, January, 10",
-    area: 9600,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lima-peru/400x250/lima-peru-temple-evening-1075606-wallpaper.jpg"
-  },
-  {
     templeName: "Mexico City Mexico",
     location: "Mexico City, Mexico",
     dedicated: "1983, December, 2",
@@ -69,13 +64,7 @@ const temples = [
     area: 40000,
     imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/2019/400x250/5-Rome-Temple-2160345.jpg"
   },
-  {
-    templeName: "Salt Lake",
-    location: "Salt Lake City, Utah, United States",
-    dedicated: "1883, April, 6",
-    area: 382207,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake/400x250/salt-lake-temple-37-1010170.jpg"
-  }
+
 ];
 
 // Target DOM nodes globally

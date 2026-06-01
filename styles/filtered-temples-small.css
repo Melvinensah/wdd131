@@ -14,6 +14,55 @@ body {
     min-height: 100vh;
 }
 
+/* 1. The Container: Creates the grid layout and forces gaps */
+.gallery-container {
+  display: grid;
+  /* Automatically calculates columns based on screen width (minimum 300px per card) */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* Adds a 25px gap between rows and columns */
+  gap: 25px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto; /* Centers the whole gallery on desktop screens */
+}
+
+/* 2. The Card: Keeps all text and images cleanly contained */
+.temple-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  
+  /* Flexbox forces the card contents to flow downwards in a neat vertical line */
+  display: flex;
+  flex-direction: column;
+}
+
+/* 3. The Typography inside the card */
+.temple-card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+  color: #333333;
+}
+
+.temple-card p {
+  margin: 4px 0;
+  font-size: 0.95rem;
+  color: #555555;
+}
+
+/* 4. The Image: CRITICAL FIX FOR OVERLAPPING */
+.temple-card img {
+  width: 100%;       /* Forces the image to exactly match the width of its parent card */
+  height: 200px;     /* Forces all images to have a uniform height */
+  object-fit: cover; /* Prevents the image from squishing or stretching out of proportion */
+  border-radius: 4px;
+  margin-top: auto;  /* Pushes the image to the bottom of the card if text lengths vary */
+  display: block;
+}
+
 h1, h2, h3 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
