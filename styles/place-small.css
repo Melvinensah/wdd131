@@ -1,0 +1,117 @@
+/* ==========================================================================
+   GLOBAL VARIABLES & RESET
+   ========================================================================== */
+:root {
+    --primary-color: hsl(125, 91%, 18%); 
+    --secondary-color: hsl(202, 100%, 25%); 
+    --text-color: #333333;
+    --light-bg: #ffffff;
+    --card-overlay-bg: rgba(255, 255, 255, 0.85);
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    font-family: var(--font-family);
+    color: var(--text-color);
+    margin: 0 auto;
+    background-color: #f0fdf4; 
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   MOBILE DEFAULT LAYOUT (Vertical Stacking)
+   ========================================================================== */
+header {
+    background-color: var(--primary-color);
+    border-bottom: 6px solid var(--secondary-color);
+    color: #ffffff;
+    text-align: center;
+    padding: 1.25rem;
+}
+
+header h1 {
+    font-size: 2.25rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.card {
+    background-color: var(--light-bg);
+    padding: 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.card h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+dl {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 280px;
+    margin: 0 auto;
+    text-align: left;
+    row-gap: 0.4rem;
+}
+
+dt {
+    font-weight: bold;
+    color: #555555;
+}
+
+dd {
+    text-align: right;
+    color: #000000;
+}
+
+/* Mobile Weather Title Design: Placed underneath the text label */
+.weather-title {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.weather-title::after {
+    display: flex;
+    flex-direction: column;
+    content: "⛅";
+    font-size: 2.5rem; /* Larger feature presentation for smaller viewports */
+    margin-top: 0.25rem;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0.3rem 0;
+}

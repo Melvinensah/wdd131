@@ -1,0 +1,129 @@
+/* --- Global Resets & Typography --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f7f5f9; /* Soft, warm tint grey */
+    color: #2b203a; /* Deep plum/near black */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+/* --- Header & Flexbox Mobile Navigation --- */
+header {
+    background-color: #3b1360; /* Deep midnight purple */
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+header h2 {
+    font-size: 1.4rem;
+    letter-spacing: -0.5px;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 2rem;
+    cursor: pointer;
+    display: block; /* Visible on mobile */
+    line-height: 1;
+    transition: color 0.2s ease;
+}
+
+.menu-btn:hover {
+    color: #cca3ff;
+}
+
+/* Base Mobile Nav: Hidden by default, uses Flexbox */
+nav {
+    display: none; 
+    flex-direction: column; 
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #3b1360;
+    z-index: 1000;
+}
+
+/* JavaScript class addition for responsive display */
+nav.open {
+    display: flex;
+}
+
+nav a {
+    color: #e5dafa;
+    padding: 1.1rem;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.2s ease;
+}
+
+/* Navigation Hover Effects */
+nav a:hover, nav a.active {
+    background-color: #521d85; /* Vibrant orchid purple drop */
+    color: #ffffff;
+}
+
+/* --- Centered Main Content Area --- */
+main {
+    max-width: 1080px; /* Limited width constraint */
+    margin: 0 auto;    /* Centers horizontally */
+    padding: 2rem 1rem;
+    flex: 1;
+    width: 100%;
+}
+
+main h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #3b1360;
+    position: relative;
+}
+
+/* --- Mobile View CSS Grid (1 Column) --- */
+main {
+    display: grid;
+    grid-template-columns: 1fr; /* Exactly 1 column for phone layouts */
+    gap: 1.75rem;
+}
+
+/* Make sure the H1 title spans across grid constraints safely */
+main h1 {
+    grid-column: 1 / -1;
+}
+
+
+/* --- Footer --- */
+footer {
+    background-color: #1e0735; /* Darker base purple */
+    color: #bfaed4;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    border-top: 4px solid #521d85;
+}
+
+footer span, footer p {
+    font-family: 'Open Sans', sans-serif;
+}

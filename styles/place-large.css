@@ -1,0 +1,52 @@
+/* ==========================================================================
+   DESKTOP OVERRIDES (Applies cleanly on screens >= 768px via HTML media tag)
+   ========================================================================== */
+@media screen  and (min-width: 768px){
+    
+
+    main {
+        position: relative; /* Acts as structural boundaries for floating layout containers */
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    /* Flip Heading layout configuration into a single inline line */
+    .weather-title {
+        flex-direction: row; 
+        justify-content: center;
+        gap: 0.5rem;
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Shrink emoticon scale to anchor clean desktop typographical balance */
+    .weather-title::after {
+        content: " ⛅";
+        font-size: 1.6rem; 
+        margin-top: 0;
+        
+    }
+
+    /* Take cards out of document stream to map over the hero background panel background */
+    .card {
+        position: absolute;
+        background-color: var(--card-overlay-bg);
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        width: 300px;
+        z-index: 10;
+    }
+
+    /* Pin Data panel to the upper left region */
+    .data-card {
+        top: 40px;
+        left: 25px;
+    }
+
+    /* Pin Weather panel to the bottom right region */
+    .weather-card {
+        bottom: 40px;
+        right: 25px;
+    }
+}

@@ -1,0 +1,59 @@
+HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="practicing design principles">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="styles/place-small.css">
+    
+    <link rel="stylesheet" href="styles/place-large.css" media="screen and (min-width: 768px)">
+    
+    <script src="scripts/place.js" defer></script>
+    <title>Sierra Leone Portal</title>
+</head>
+<body>
+    <header>
+        <h1>Sierra Leone</h1>
+    </header>
+
+    <main>
+        <section class="hero">
+            <picture>
+                <source srcset="images/chimp4.webp" media="(min-width: 600px)">
+                <img src="images/chimp4.webp" alt="chimps in Sierra Leone wild environment" loading="lazy">
+            </picture>
+        </section>
+
+        <section class="card data-card">
+            <h2>Data</h2>
+            <dl>
+                <dt>Area:</dt> <dd>71,740 sq km</dd>
+                <dt>Population:</dt> <dd>8,996,000</dd>
+                <dt>Capital:</dt> <dd>Freetown</dd>
+                <dt>Languages:</dt> <dd>Krio, English</dd>
+                <dt>Currency:</dt> <dd>SLL</dd>
+                <dt>Time Zone:</dt> <dd>UTC+0</dd>
+                <dt>Calling Code:</dt> <dd>+232</dd>
+                <dt>Internet TLD:</dt> <dd>.sl</dd>
+            </dl>
+        </section>
+
+        <section class="card weather-card">
+            <h2 class="weather-title">Weather</h2>
+            <dl>
+                <dt>Temperature:</dt> <dd id="temp">10 °C</dd>
+                <dt>Conditions:</dt> <dd>Partly Cloudy</dd>
+                <dt>Wind:</dt> <dd id="wind">5 km/h</dd>
+                <dt>Wind Chill:</dt> <dd id="windchill"></dd>
+            </dl>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="current-year"></span> 🌸 Melvin Ensah Bunduka 🌸 Sierra Leone</p>
+        <p class="last-modified">Last Modification: <span id="last-modified-date"></span></p>
+    </footer>
+</body>
+</html>
