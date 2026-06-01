@@ -86,6 +86,9 @@ nav a:hover, nav a.active {
 
 /* --- Centered Main Content Area --- */
 main {
+    display: grid;
+    grid-template-columns: 1fr; /* Exactly 1 column for phone layouts */
+    gap: 1.75rem;
     max-width: 1080px; /* Limited width constraint */
     margin: 0 auto;    /* Centers horizontally */
     padding: 2rem 1rem;
@@ -94,6 +97,7 @@ main {
 }
 
 main h1 {
+    grid-column: 1 / -1;
     text-align: center;
     margin-bottom: 2rem;
     color: #3b1360;
@@ -101,17 +105,6 @@ main h1 {
 }
 
 /* --- Mobile View CSS Grid (1 Column) --- */
-main {
-    display: grid;
-    grid-template-columns: 1fr; /* Exactly 1 column for phone layouts */
-    gap: 1.75rem;
-}
-
-/* Make sure the H1 title spans across grid constraints safely */
-main h1 {
-    grid-column: 1 / -1;
-}
-
 
 /* --- Footer --- */
 footer {
