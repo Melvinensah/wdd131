@@ -1,0 +1,161 @@
+:root {
+    --header-bg: #320632;      /* Dark purple header/footer */
+    --form-bg: #d7d2db;        /* Light grey-purple form body */
+    --input-bg: #ffffff;
+    --text-color: #000000;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header & Footer */
+header, footer {
+    background-color: var(--header-bg);
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+/* Layout Container */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+/* Form Styling */
+form {
+    background-color: var(--form-bg);
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    border: 1px solid #b6b0bc;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels */
+label {
+    font-weight: bold;
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}
+
+.feature-title {
+    margin-bottom: 2px;
+}
+
+.sub-label {
+    font-size: 0.85rem;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.optional {
+    color: #0000ff;
+    font-size: 0.8rem;
+    font-weight: normal;
+}
+
+/* Standard Inputs */
+select, input[type="date"], textarea, input[type="text"] {
+    padding: 6px;
+    border: 1px solid #a6a6a6;
+    font-size: 1rem;
+    background-color: var(--input-bg);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Star Rating Layout (Stacked Vertically per Item) */
+.rating-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+.rating-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.rating-item label {
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+    font-weight: normal;
+}
+
+.rating-item input[type="radio"] {
+    margin: 0;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/* Checkbox Stack Layout */
+.checkbox-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.checkbox-stack label {
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.checkbox-stack input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+}
+
+/* Submit Button */
+.submit-btn {
+    background-color: #ededed;
+    color: #000000;
+    border: 1px solid #a6a6a6;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.submit-btn:hover {
+    background-color: #e0e0e0;
+}

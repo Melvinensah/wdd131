@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review</title>
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
+    <main>
+        <form method="get" action="review.html" id="reviewForm">
+            <div class="form-group">
+                <label for="productName">Product Name</label>
+                <select id="productName" name="productName" required>
+                    <option value="" disabled selected>Choose a Product ...</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Overall Rating</label>
+                <div class="rating-container">
+                    <div class="rating-item">
+                        <label for="star1">☆</label>
+                        <input type="radio" id="star1" name="rating" value="1" required>
+                    </div>
+                    <div class="rating-item">
+                        <label for="star2">☆☆</label>
+                        <input type="radio" id="star2" name="rating" value="2" required>
+                    </div>
+                    <div class="rating-item">
+                        <label for="star3">☆☆☆</label>
+                        <input type="radio" id="star3" name="rating" value="3" required>
+                    </div>
+                    <div class="rating-item">
+                        <label for="star4">☆☆☆☆</label>
+                        <input type="radio" id="star4" name="rating" value="4" required>
+                    </div>
+                    <div class="rating-item">
+                        <label for="star5">☆☆☆☆☆</label>
+                        <input type="radio" id="star5" name="rating" value="5" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="installationDate">Date of Installation</label>
+                <input type="date" id="installationDate" name="installationDate" required>
+            </div>
+
+            <div class="form-group">
+                <label class="feature-title">Which features did you find useful in the product?</label>
+                <span class="sub-label">(Check all that apply)</span>
+                <div class="checkbox-stack">
+                    <label for="feature1">
+                        <input type="checkbox" id="feature1" name="features" value="durability"> Durability
+                    </label>
+                    <label for="feature2">
+                        <input type="checkbox" id="feature2" name="features" value="ease-of-use"> Ease of Use
+                    </label>
+                    <label for="feature3">
+                        <input type="checkbox" id="feature3" name="features" value="performance"> Performance
+                    </label>
+                    <label for="feature4">
+                        <input type="checkbox" id="feature4" name="features" value="design"> Design
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="writtenReview">Written Review <span class="optional">(Optional)</span></label>
+                <textarea id="writtenReview" name="writtenReview" rows="4"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="userName">Your Name <span class="optional">(Optional)</span></label>
+                <input type="text" id="userName" name="userName">
+            </div>
+
+            <input type="submit" value="Post Review" class="submit-btn">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Melvin Ensah Bunduka | Sierra Leone</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
