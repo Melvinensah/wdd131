@@ -1,0 +1,13 @@
+@media screen and (min-width: 600px) {
+    main {
+        padding: 40px 20px;
+        background-color: #f4f4f4; /* Subtle background contrast for desktop viewing */
+    }
+
+    form {
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        border: 1px solid #b6b0bc;
+        padding: 30px;
+    }
+}
