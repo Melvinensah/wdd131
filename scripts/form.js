@@ -9,7 +9,7 @@ if (currentYearSpan) {
 
 // Output document modification context metadata
 if (lastModifiedParagraph) {
-        lastModifiedParagraph.textContent = `Last Modification: ${document.lastModified}`;
+        lastModifiedParagraph.textContent = `Last Modified: ${document.lastModified}`;
 }
 // Product Data Array
 const products = [
