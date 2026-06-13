@@ -1,0 +1,11 @@
+/* --- Media Queries for Wide Desktop Layouts --- */
+@media (min-width: 48rem) {
+  .color-box-container {
+    flex-direction: row; /* Horizontal alignment on large monitors */
+  }
+
+  .wireframe-grid {
+    grid-template-columns: 1fr 1fr; /* Displays mobile and desktop layouts side-by-side */
+    gap: 2rem;
+  }
+}

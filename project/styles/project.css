@@ -1,0 +1,393 @@
+/* --- Brand Variables & Theme Constraints --- */
+:root {
+  --primary-bg: #ffffff;
+  --secondary-color: #1a365d; /* Dark Slate Blue */
+  --accent-color: #00a3c4;    /* Teal/Cyan */
+  --text-dark: #2d3748;
+  --light-grey: #f7fafc;
+  --border-color: #e2e8f0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--primary-bg);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* --- Header Branding Elements --- */
+header {
+  background-color: var(--secondary-color);
+  color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 3px solid var(--accent-color);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.logo-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.header-logo {
+  height: 38px;
+  max-width: 140px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+#menu-toggle {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* --- Navigation Links and Hover Interactions --- */
+nav {
+  display: none; 
+  flex-direction: column;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--secondary-color);
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+nav.open {
+  display: flex;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.75rem 1.2rem;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+nav a:hover, nav a.active {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: var(--accent-color);
+}
+
+/* --- Content Infrastructure Layouts --- */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+section {
+  padding: 3rem 0 2rem 0;
+}
+
+h2 {
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--secondary-color);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  border-left: 5px solid var(--accent-color);
+  padding-left: 12px;
+}
+
+.welcome-blurb {
+  background-color: var(--light-grey);
+  padding: 2rem;
+  border-radius: 6px;
+  margin-top: 2rem;
+  border: 1px solid var(--border-color);
+}
+
+/* --- Hero Layout Container with Text Overlay --- */
+#hero {
+  margin-top: 1rem;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.hero-wrapper {
+  position: relative;
+  width: 100%;
+  background-color: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 380px;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  filter: brightness(35%); 
+}
+
+.hero-overlay-content {
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  max-width: 800px;
+}
+
+#hero h1 {
+  font-family: 'Segoe UI', sans-serif;
+  color: #ffffff;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  line-height: 1.25;
+}
+
+#hero p {
+  color: #e2e8f0;
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn-cta {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.8rem 2rem;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+.btn-cta:hover {
+  transform: translateY(-2px);
+}
+
+/* --- Services Display Panel --- */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.service-card {
+  background-color: var(--light-grey);
+  padding: 2rem;
+  border-top: 4px solid var(--secondary-color);
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.service-card h3 {
+  color: var(--secondary-color);
+  margin-bottom: 0.75rem;
+}
+
+/* --- About Us Page Layout Layout --- */
+.about-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  background-color: var(--light-grey);
+  padding: 2rem;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+}
+
+.about-stats-box {
+  background-color: var(--secondary-color);
+  color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 4px;
+}
+
+.about-stats-box h3 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.about-stats-box ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.about-stats-box li {
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+/* --- Portfolio Sorting Gallery Interface --- */
+.filter-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.filter-btn {
+  background-color: var(--light-grey);
+  border: 1px solid var(--border-color);
+  color: var(--text-dark);
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.filter-btn.active, .filter-btn:hover {
+  background-color: var(--accent-color);
+  color: #ffffff;
+  border-color: var(--accent-color);
+}
+
+#gallery-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.project-card {
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  background-color: #ffffff;
+}
+
+.project-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.project-info {
+  padding: 1.5rem;
+}
+
+.project-info h3 {
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.project-info p {
+  color: var(--text-dark);
+  font-size: 0.95rem;
+}
+
+.project-tag {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: #ffffff;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+}
+
+/* --- Registration Form System Construction --- */
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+form {
+  background-color: var(--light-grey);
+  padding: 2rem;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: var(--secondary-color);
+}
+
+.form-group input, .form-group select, .form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.btn-submit {
+  background-color: var(--secondary-color);
+  color: #ffffff;
+  border: none;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background-color: #2a4365;
+}
+
+.tracker-box {
+  background-color: #ebf8fa;
+  border: 1px dashed var(--accent-color);
+  padding: 2rem;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#form-success-msg {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #c6f6d5;
+  color: #22543d;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none !important;
+}
+
+footer {
+  background-color: var(--secondary-color);
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 4rem;
+  font-size: 0.9rem;
+}

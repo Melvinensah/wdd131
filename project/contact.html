@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | BBEM Technical Limited</title>
+  <meta name="description" content="Get in touch with technical estimators at BBEM Technical Limited to request detailed site facility diagnostic surveys.">
+  <link rel="stylesheet" href="styles/project.css">
+  <link rel="stylesheet" href="styles/project-large.css">
+  <script src="scripts/project.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo-link">
+        <img src="images/bbemLogo.jpg" alt="BBEM Technical Limited Logo" class="header-logo">
+      </a>
+      <button id="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+      <nav id="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="contact">
+      <h2>Request an Estimate / Consultation</h2>
+      <div class="contact-wrapper">
+        <form id="consultation-form" action="#" method="get">
+          <div class="form-group">
+            <label for="fullName">Full Name / Company:</label>
+            <input type="text" id="fullName" name="fullName" required placeholder="e.g. John Doe / Alpha Corp">
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Business Email:</label>
+            <input type="email" id="email" name="email" required placeholder="name@company.com">
+          </div>
+
+          <div class="form-group">
+            <label for="serviceType">Required Infrastructure Service:</label>
+            <select id="serviceType" name="serviceType" required>
+              <option value="" disabled selected>-- Select Service Area --</option>
+              <option value="Electrical">Industrial Electrical Installation</option>
+              <option value="Mechanical">Centralized HVAC / Mechanical System</option>
+              <option value="Low-Voltage">CCTV / Fire Alarm System Matrix</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="notes">Project Specifications / Details:</label>
+            <textarea id="notes" name="notes" rows="4" required placeholder="Describe your technical infrastructure requirements..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">Submit Request</button>
+        </form>
+
+        <div class="tracker-box">
+          <h3>Submission Status</h3>
+          <p id="submission-counter">You have submitted 0 project inquiries during this session.</p>
+          <div id="form-success-msg" class="hidden"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+   <p>&copy; <span id="currentyear"></span> | Melvin Ensah Bunduka | Sierra Leone</p>
+   <p id="lastModified"></p>
+  </footer>
+
+</body>
+</html>
