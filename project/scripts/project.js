@@ -65,8 +65,6 @@ function renderGalleryCards(filteredArray) {
         <div class="project-info">
           <span class="project-tag">${project.category}</span>
           <h3>${project.title}</h3>
-          <p><strong>Location Site:</strong> ${project.location}</p>
-          <p><strong>Deployment Year:</strong> ${project.year}</p>
         </div>
       </div>
     `;
