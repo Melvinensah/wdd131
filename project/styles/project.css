@@ -391,16 +391,58 @@ form {
   display: none !important;
 }
 
+/* --- Footer Layout & Interactive Social Integration --- */
 footer {
   background-color: var(--secondary-color);
   color: #ffffff;
-  text-align: center;
-  padding: 2rem 1rem;
+  padding: 2.5rem 1rem;
   margin-top: 4rem;
   font-size: 0.95rem;
+  border-top: 3px solid var(--accent-color);
 }
 
-footer p {
+.footer-container {
+  display: flex;
+  flex-direction: column; /* Stacks vertically into a neat list on mobile devices */
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-meta {
+  text-align: center;
+}
+
+.footer-meta p {
   margin: 0.4rem 0;
   letter-spacing: 0.5px;
+}
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem; /* Generates comfortable spacing between the clickable icons */
+}
+
+.footer-socials a {
+  display: inline-flex;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.social-icon {
+  width: 32px;  /* Clean, professional bounding size standard */
+  height: 32px;
+  object-fit: contain;
+  filter: brightness(0) invert(1); /* Dynamically turns icons crisp white to pop off the blue footer */
+}
+
+/* Hover feedback action turns the white icons into your brand teal color */
+.footer-socials a:hover {
+  transform: translateY(-3px);
+}
+
+.footer-socials a:hover .social-icon {
+  filter: none; /* Reveals original brand colors on mouse hover */
 }

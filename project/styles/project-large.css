@@ -46,3 +46,13 @@ nav a {
 .contact-wrapper {
   grid-template-columns: 2fr 1fr;
 }
+
+.footer-container {
+  flex-direction: row; /* Aligns textual elements left and icons to the far right on desktop */
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.footer-meta {
+  text-align: left; /* Snaps text left aligned for a clean balanced aesthetic */
+}
