@@ -1,54 +1,41 @@
-// --- 2. Automated Copyright & Modification Trackers ---
-const currentYearSpan = document.getElementById("currentyear");
-const lastModifiedParagraph = document.getElementById("lastModified");
-
-// Output current system year dynamically
-if (currentYearSpan) {
-        currentYearSpan.textContent = new Date().getFullYear();
-}
-
-// Output document modification context metadata
-if (lastModifiedParagraph) {
-        lastModifiedParagraph.textContent = `Last Modified: ${document.lastModified}`;
-}
-
-// --- 1. Architectural Project Database (Updated Domain-Specific Material) ---
+// --- 1. Project Database (Local Workspace Assets & Specific Service Mapping) ---
 const projectData = [
   {
-    title: "Central Commercial Switchgear Matrix",
+    title: "Commercial & Industrial Electrical Installations",
     category: "Electrical",
     location: "Freetown Site Alpha",
     year: 2025,
-    image: "https://images.unsplash.com/photo-1621905252507-b354bc25edac?auto=format&fit=crop&w=600&q=80" // High-voltage industrial panel
+    image: "images/electrical.webp"
   },
   {
-    title: "Industrial Plant Chiller Loop Integration",
+    title: "Central Commercial Plumbing Infrastructure Systems",
+    category: "Mechanical",
+    location: "Bo Industrial Complex",
+    year: 2025,
+    image: "images/plumbing.webp"
+  },
+  {
+    title: "Industrial Facility HVAC Plant Matrix",
     category: "Mechanical",
     location: "Kono Logistics Center",
     year: 2025,
-    image: "https://images.unsplash.com/photo-1585338107529-13afc5f02586?auto=format&fit=crop&w=600&q=80" // Large commercial HVAC/Chiller units
+    image: "images/hvac.webp"
   },
   {
-    title: "High-Security CCTV IP Server Node",
+    title: "Integrated ELV Systems (CCTV, Internet Connectivity, Fire Alarm, Audio Visual)",
     category: "Low-Voltage",
     location: "Corporate HQ Hub",
     year: 2026,
-    image: "https://images.unsplash.com/photo-1557597774-9d2739f85a94?auto=format&fit=crop&w=600&q=80" // Security camera system installation
-  },
-  {
-    title: "Multi-Zone Automated Fire Suppression Array",
-    category: "Low-Voltage",
-    location: "Industrial Complex West",
-    year: 2024,
-    image: "https://images.unsplash.com/photo-1596753106198-d1a1b8cf0f23?auto=format&fit=crop&w=600&q=80" // Industrial fire alarm control panel matrix
+    image: "images/cctv.webp"
   }
 ];
+
 // --- 2. Centralized DOM Initialization Engine ---
 document.addEventListener("DOMContentLoaded", () => {
   initializeMobileMenu();
-  displayLastModified();
+  displayRequiredFooterData(); // Safe execution for required footer elements
 
-  // Defensive execution checks determine page context dynamically
+  // Selective initialization depending on active page context node
   const galleryBox = document.getElementById("gallery-container");
   if (galleryBox) {
     renderGalleryCards(projectData);
@@ -80,7 +67,6 @@ function renderGalleryCards(filteredArray) {
   container.innerHTML = ""; 
 
   filteredArray.forEach(project => {
-    // Standard template literal card generation using full headers, paragraphs, and images
     const cardMarkup = `
       <div class="project-card">
         <img src="${project.image}" alt="${project.title}" loading="lazy">
@@ -146,10 +132,16 @@ function initializeFormTracker() {
   });
 }
 
-// --- 7. Last Modified Timestamp Utility ---
-function displayLastModified() {
-  const modDisplay = document.getElementById("last-modified");
-  if (modDisplay) {
-    modDisplay.textContent = `Last Modified: ${document.lastModified}`;
+// --- 7. Required Copyright & Modification Metadata Injector ---
+function displayRequiredFooterData() {
+  const currentYearSpan = document.getElementById("currentyear");
+  const lastModifiedParagraph = document.getElementById("lastModified");
+
+  if (currentYearSpan) {
+    currentYearSpan.textContent = new Date().getFullYear();
+  }
+  
+  if (lastModifiedParagraph) {
+    lastModifiedParagraph.textContent = `Last Modification: ${document.lastModified}`;
   }
 }
