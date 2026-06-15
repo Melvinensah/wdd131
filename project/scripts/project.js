@@ -3,29 +3,21 @@ const projectData = [
   {
     title: "Commercial & Industrial Electrical Installations",
     category: "Electrical",
-    location: "Freetown Site Alpha",
-    year: 2025,
     image: "images/electrical.webp"
   },
   {
     title: "Central Commercial Plumbing Infrastructure Systems",
     category: "Mechanical",
-    location: "Bo Industrial Complex",
-    year: 2025,
     image: "images/plumbing.webp"
   },
   {
     title: "Industrial Facility HVAC Plant Matrix",
     category: "Mechanical",
-    location: "Kono Logistics Center",
-    year: 2025,
     image: "images/hvac.webp"
   },
   {
     title: "Integrated ELV Systems (CCTV, Internet Connectivity, Fire Alarm, Audio Visual)",
     category: "Low-Voltage",
-    location: "Corporate HQ Hub",
-    year: 2026,
     image: "images/cctv.webp"
   }
 ];
