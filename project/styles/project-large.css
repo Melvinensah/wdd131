@@ -48,11 +48,12 @@ nav a {
 }
 
 .footer-container {
-  flex-direction: row; /* Aligns textual elements left and icons to the far right on desktop */
-  justify-content: space-between;
-  padding: 0 1rem;
+  flex-direction: column; /* Keeps elements vertically stacked and clean */
+  justify-content: center; /* Center handles the vertical axis align distribution */
+  align-items: center;    /* Keeps text and social icon blocks perfectly centered horizontally */
+  text-align: center;
 }
 
 .footer-meta {
-  text-align: left; /* Snaps text left aligned for a clean balanced aesthetic */
+  text-align: center; /* Enforces absolute center lines for all text rows */
 }
