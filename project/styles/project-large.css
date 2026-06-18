@@ -48,12 +48,27 @@ nav a {
 }
 
 .footer-container {
-  flex-direction: column; /* Keeps elements vertically stacked and clean */
-  justify-content: center; /* Center handles the vertical axis align distribution */
-  align-items: center;    /* Keeps text and social icon blocks perfectly centered horizontally */
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center;  
   text-align: center;
 }
 
 .footer-meta {
-  text-align: center; /* Enforces absolute center lines for all text rows */
+  text-align: center; 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
